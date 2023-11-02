@@ -7,9 +7,12 @@
 </head>
 <body>
     <div id="app">
-        <div class="emails">
-            <p class="email" v-for="email in emails">{{ email }}</p>
-        </div>
+            <ul class="emails">
+                <li class="email" v-for="email in emails" v-if="emailsGenerated">
+                    {{ email }}
+                </li>
+                <p v-else>Quack</p>
+            </ul>
     </div>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
